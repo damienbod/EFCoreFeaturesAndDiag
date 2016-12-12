@@ -1,0 +1,5 @@
+src/EFCoreFeaturesAndDiag/obj
+src/EFCoreFeaturesAndDiag/bin
+.vs
+src/EFCoreFeaturesAndDiag/EFCoreFeaturesAndDiag.xproj.user
+src/EFCoreFeaturesAndDiag/project.lock.json
