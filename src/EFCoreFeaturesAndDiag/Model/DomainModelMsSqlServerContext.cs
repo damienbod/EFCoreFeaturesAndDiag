@@ -25,7 +25,8 @@ namespace EFCoreFeaturesAndDiag.Model
 
             builder.Entity<DataEventRecord>()
                 .Property(b => b.MadDescription)
-                .HasField("_description");
+                .HasField("_description")
+                .HasColumnName("_description");
 
             base.OnModelCreating(builder);
         }
