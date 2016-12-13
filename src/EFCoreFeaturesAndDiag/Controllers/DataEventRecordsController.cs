@@ -34,6 +34,24 @@ namespace AspNet5MultipleProject.Controllers
             return _dataAccessProvider.GetDataEventRecord(id);
         }
 
+        [HttpGet("AddTest/")]
+        public IActionResult AddTest()
+        {
+            DataEventRecord dataEventRecord = new DataEventRecord();
+            dataEventRecord.Name = "AddTest";
+            dataEventRecord.DataEventRecordId = 0;
+            dataEventRecord.MadDescription = "Mad description test";
+            dataEventRecord.SourceInfo = new SourceInfo();
+            dataEventRecord.SourceInfo.SourceInfoId = 0;
+            dataEventRecord.SourceInfo.Name = "S Add Test";
+            dataEventRecord.SourceInfo.Description = "S Description";
+            dataEventRecord.SourceInfoId = 0;
+
+            _dataAccessProvider.AddDataEventRecord(dataEventRecord);
+
+            return Ok("test data created");
+        }
+
         [HttpPost]
         public void Post([FromBody]DataEventRecord value)
         {
